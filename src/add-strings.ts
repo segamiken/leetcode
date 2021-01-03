@@ -6,9 +6,9 @@ function addStrings(num1: string, num2: string): string {
     let p2: number = num2.length - 1;
     
     while (p1 >= 0 || p2 >= 0) {
-        let x1 = p1 >= 0 ? Number(num1.charAt(p1)) : 0;
-        let x2 = p2 >= 0 ? Number(num2.charAt(p2)) : 0;
-        let value = (x1 + x2 + carry) % 10;
+        let x1: number = p1 >= 0 ? Number(num1.charAt(p1)) : 0;
+        let x2: number = p2 >= 0 ? Number(num2.charAt(p2)) : 0;
+        let value: number = (x1 + x2 + carry) % 10;
         carry = (x1 + x2 + carry) / 10　>= 1 ?  Math.floor((x1 + x2 + carry) / 10) : 0;
         res.unshift(value);
         p1 --;
