@@ -8,7 +8,7 @@
 // Output: 1
 
 // My Solution
-function singleNumber(nums: number[]): number {
+function singleNumber(nums: number[]): number | undefined {
     for (let i = 0; i < nums.length; i++) {
         const copiedNums = nums.slice();
         copiedNums.splice(i, 1);
