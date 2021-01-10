@@ -16,7 +16,7 @@ function majorityElement(nums: number[]): number {
 
 //bruto force
 //This is slower, but memory usage is better than majorityElement()
-function majorityElement2(nums: number[]): number {
+function majorityElement2(nums: number[]): number | undefined {
     let majorityCount = nums.length / 2;
     
     for (let i = 0; i < nums.length; i ++) {
