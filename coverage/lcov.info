@@ -1,0 +1,17 @@
+TN:
+SF:src/two-sum.ts
+FN:1,twoSum
+FNF:1
+FNH:1
+FNDA:2,twoSum
+DA:1,1
+DA:2,2
+DA:3,3
+DA:4,4
+DA:5,2
+LF:5
+LH:5
+BRDA:4,0,0,2
+BRF:1
+BRH:1
+end_of_record
