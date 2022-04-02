@@ -1,33 +1,33 @@
 // Brute Force
 function maxProfit(prices: number[]): number {
-    let maxProfit: number = 0;
-    for (let i = 0; i < prices.length; i++) {
-        for (let m = i+1; m < prices.length - 1; m++) {
-            const profit = prices[m] - prices[i];
-            if (profit > maxProfit) {
-                maxProfit = profit;
-            }
-        }
+  let maxProfit: number = 0;
+  for (let i = 0; i < prices.length; i++) {
+    for (let m = i + 1; m < prices.length - 1; m++) {
+      const profit = prices[m] - prices[i];
+      if (profit > maxProfit) {
+        maxProfit = profit;
+      }
     }
-    return maxProfit;
+  }
+  return maxProfit;
 }
 
 // One Pass
 function maxProfit2(prices: number[]): number {
-    let minPrice = Number.MAX_SAFE_INTEGER;
-    let maxProfit = 0;
+  let minPrice = Number.MAX_SAFE_INTEGER;
+  let maxProfit = 0;
 
-    for (let i = 0; i < prices.length; i++) {
-        if (prices[i] < minPrice) {
-            minPrice = prices[i];
-        }
-        const profit = prices[i] - minPrice;
-        if (profit > maxProfit) {
-            maxProfit = profit;
-        }
+  for (let i = 0; i < prices.length; i++) {
+    if (prices[i] < minPrice) {
+      minPrice = prices[i];
     }
-    return maxProfit;
+    const profit = prices[i] - minPrice;
+    if (profit > maxProfit) {
+      maxProfit = profit;
+    }
+  }
+  return maxProfit;
 }
 
-console.log(maxProfit([7,1,5,3,6,4]));
+console.log(maxProfit([7, 1, 5, 3, 6, 4]));
 //expected out put is 5
